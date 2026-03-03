@@ -1,16 +1,81 @@
-# React + Vite
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🍎 Learning Fragments — Food Items List
 
-Currently, two official plugins are available:
+> A React practice project focused on **Fragments**, **Props**, **List Rendering**, and **Conditional Rendering** using a healthy food items list.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📖 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project renders a list of healthy food items using core React patterns. It demonstrates how to:
 
-## Expanding the ESLint configuration
+- Pass data through **props** from parent to child components
+- Render dynamic lists using **`.map()`** with proper **keys**
+- Show conditional **error/empty messages** based on data
+- Use **Bootstrap's list-group** for clean UI styling
+- Apply **CSS Modules** for scoped component styles
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- 🥗 Dynamic food items list rendered from an array
+- 📦 Reusable `FoodItems`, `Item`, and `ErrorMessage` components
+- 🎨 Styled with Bootstrap list-group classes
+- ⚡ Conditional rendering for empty states
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Navigate to project directory
+cd Fragments/learning-fragment
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+---
+
+## 📁 Project Structure
+
+```
+learning-fragment/
+├── src/
+│   ├── components/
+│   │   ├── FoodItems.jsx         # List container component
+│   │   ├── item.jsx              # Individual item component
+│   │   ├── item.module.css       # Scoped styles for item
+│   │   └── ErrorMessage.jsx      # Conditional error display
+│   ├── App.css
+│   ├── App.jsx                   # Root component with data
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🧠 Concepts Practiced
+
+| Concept | Description |
+|:--------|:------------|
+| **Props** | Passing `items` array from `App` → `FoodItems` → `Item` |
+| **List Rendering** | Using `.map()` to dynamically render list items |
+| **Keys** | Assigning unique keys for list performance |
+| **Conditional Rendering** | Showing error message when list is empty |
+| **CSS Modules** | Scoped styling with `item.module.css` |
+| **Fragments** | Understanding React Fragment usage |
+
+---
+
+## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
