@@ -1,16 +1,80 @@
-# React + Vite
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/CSS_Modules-Scoped-blue?style=for-the-badge" alt="CSS Modules" />
+  <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🧮 Calculator — Version 1
 
-Currently, two official plugins are available:
+> A clean **calculator UI** built with React, featuring dynamically rendered buttons and scoped styling using **CSS Modules**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📖 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is the first version of a calculator application that focuses on building the **UI layer** with proper component architecture. Buttons are dynamically rendered from an array using `.map()`, and all styles are scoped using CSS Modules.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🔢 Dynamically rendered calculator buttons (0–9, operators, clear, equals)
+- 📟 Clean display input field
+- 🎨 Fully scoped styling with **CSS Modules**
+- 📦 Modular component structure (`Display` + `ButtonsContainer`)
+- ⚡ Vite-powered fast development
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Navigate to project directory
+cd projects/Calculator-version-one
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+---
+
+## 📁 Project Structure
+
+```
+Calculator-version-one/
+├── src/
+│   ├── components/
+│   │   ├── Display.jsx                  # Calculator display
+│   │   ├── Display.module.css           # Display styles
+│   │   ├── ButtonsContainer.jsx         # Button grid component
+│   │   └── ButtonsContainer.module.css  # Button grid styles
+│   ├── App.jsx                          # Root layout
+│   ├── App.module.css                   # App-level styles
+│   ├── assets/
+│   │   └── react.svg
+│   └── main.jsx
+├── public/
+│   └── vite.svg
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🧠 Concepts Practiced
+
+| Concept | Description |
+|:--------|:------------|
+| **CSS Modules** | Scoped styles per component (`.module.css`) |
+| **Dynamic Rendering** | Rendering buttons from array with `.map()` |
+| **Component Architecture** | Splitting UI into `Display` and `ButtonsContainer` |
+| **Props** | Passing data between components |
+| **Array Methods** | Using `.map()` for dynamic UI generation |
+
+---
+
+## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
