@@ -1,16 +1,75 @@
-# React + Vite
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎨 Bootstrap Practice — Button Variants
 
-Currently, two official plugins are available:
+> A hands-on React project exploring **Bootstrap 5 integration** with React + Vite, showcasing all Bootstrap button variants.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📖 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This mini-project demonstrates how to integrate and use **Bootstrap 5** inside a React application built with Vite. It renders all standard Bootstrap button variants:
 
-## Expanding the ESLint configuration
+- 🔵 Primary, Secondary, Success
+- 🔴 Danger, Warning, Info
+- ⚪ Light, Dark, Link
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- 🎨 All 9 Bootstrap button styles rendered in React
+- 📦 Bootstrap imported via npm (not CDN)
+- ⚡ Vite-powered fast development with HMR
+- 🧪 Practice project for CSS framework integration
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Navigate to project directory
+cd BootStrap/prec
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+---
+
+## 📁 Project Structure
+
+```
+prec/
+├── src/
+│   ├── assets/
+│   │   └── react.svg
+│   ├── App.css
+│   ├── App.jsx           # Button variants demo
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🧠 Concepts Practiced
+
+| Concept | Description |
+|:--------|:------------|
+| **Bootstrap in React** | Installing & importing Bootstrap via npm |
+| **CSS Classes in JSX** | Using `className` for Bootstrap classes |
+| **Component Rendering** | Rendering multiple UI elements |
+| **useState Hook** | State management basics |
+
+---
+
+## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
