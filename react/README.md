@@ -1,16 +1,68 @@
-# React + Vite
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ⚛️ React Starter — Hello World
 
-Currently, two official plugins are available:
+> A minimal **React + Vite** boilerplate project used as the starting point for learning React fundamentals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📖 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is a barebones React application that serves as a sandbox for experimenting with:
 
-## Expanding the ESLint configuration
+- **JSX Syntax** — Writing HTML-like markup inside JavaScript
+- **Functional Components** — Building UI with pure functions
+- **React + Vite Setup** — Understanding the modern React development toolchain
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Getting Started
+
+```bash
+# Navigate to project directory
+cd react
+
+# Install dependencies
+npm install
+
+# Start dev server with HMR
+npm run dev
+```
+
+---
+
+## 📁 Project Structure
+
+```
+react/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   └── react.svg
+│   ├── App.css
+│   ├── App.jsx          # Main App component
+│   ├── index.css
+│   └── main.jsx         # Entry point
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🧠 Concepts Practiced
+
+| Concept | Status |
+|:--------|:------:|
+| JSX Fundamentals | ✅ |
+| Functional Components | ✅ |
+| Vite Dev Server & HMR | ✅ |
+| Project Scaffolding | ✅ |
+
+---
+
+## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
