@@ -1,68 +1,86 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-</p>
+# React Starter Boilerplate
 
-# ⚛️ React Starter — Hello World
-
-> A minimal **React + Vite** boilerplate project used as the starting point for learning React fundamentals.
+A minimal React + Vite project used as a starting template for new experiments and learning exercises.
 
 ---
 
-## 📖 About
+## Overview
 
-This is a barebones React application that serves as a sandbox for experimenting with:
-
-- **JSX Syntax** — Writing HTML-like markup inside JavaScript
-- **Functional Components** — Building UI with pure functions
-- **React + Vite Setup** — Understanding the modern React development toolchain
+This project serves as the foundational boilerplate for the `react-prep` repository. It contains a bare-minimum React setup with Vite, providing a fast development server and optimized build pipeline. The application renders a simple heading element using JSX and fragment syntax.
 
 ---
 
-## 🚀 Getting Started
+## Tech Stack
+
+| Technology       | Version  | Purpose                          |
+|:-----------------|:--------:|:---------------------------------|
+| React            | 19.2     | Component-based UI library       |
+| React DOM        | 19.2     | DOM rendering for React          |
+| Vite             | 7.2      | Development server and bundler   |
+| ESLint           | 9.x      | Static code analysis             |
+
+---
+
+## Project Structure
+
+```
+react/
+|-- public/
+|   +-- vite.svg
+|-- src/
+|   |-- assets/
+|   |   +-- react.svg
+|   |-- App.css
+|   |-- App.jsx
+|   |-- index.css
+|   +-- main.jsx
+|-- index.html
+|-- package.json
+|-- vite.config.js
++-- eslint.config.js
+```
+
+---
+
+## Component Architecture
+
+### App (App.jsx)
+
+The root component of the application. Uses React fragment syntax (`<>...</>`) to render a basic heading element. Imports `App.css` for component-level styling and `useState` from React for future state management experiments.
+
+---
+
+## Key Concepts Demonstrated
+
+- **JSX Syntax** -- Writing HTML-like markup inside JavaScript functions
+- **Fragment Syntax** -- Using `<>...</>` to group multiple elements without adding extra DOM nodes
+- **CSS Imports** -- Importing CSS files directly into React components
+- **Vite Project Setup** -- Understanding the default scaffolding of a Vite + React project
+
+---
+
+## Getting Started
 
 ```bash
-# Navigate to project directory
+# Navigate to the project directory
 cd react
 
 # Install dependencies
 npm install
 
-# Start dev server with HMR
+# Start the development server
 npm run dev
 ```
 
----
-
-## 📁 Project Structure
-
-```
-react/
-├── public/
-│   └── vite.svg
-├── src/
-│   ├── assets/
-│   │   └── react.svg
-│   ├── App.css
-│   ├── App.jsx          # Main App component
-│   ├── index.css
-│   └── main.jsx         # Entry point
-├── index.html
-├── package.json
-└── vite.config.js
-```
+The application will be available at `http://localhost:5173` by default.
 
 ---
 
-## 🧠 Concepts Practiced
+## Available Scripts
 
-| Concept | Status |
-|:--------|:------:|
-| JSX Fundamentals | ✅ |
-| Functional Components | ✅ |
-| Vite Dev Server & HMR | ✅ |
-| Project Scaffolding | ✅ |
-
----
-
-## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
+| Command           | Description                             |
+|:------------------|:----------------------------------------|
+| `npm run dev`     | Start the Vite development server       |
+| `npm run build`   | Create an optimized production build    |
+| `npm run preview` | Preview the production build locally    |
+| `npm run lint`    | Run ESLint to check for code issues     |
