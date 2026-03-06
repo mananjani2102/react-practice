@@ -1,80 +1,126 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/CSS_Modules-Scoped-blue?style=for-the-badge" alt="CSS Modules" />
-  <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-</p>
+# Calculator Version One
 
-# 🧮 Calculator — Version 1
-
-> A clean **calculator UI** built with React, featuring dynamically rendered buttons and scoped styling using **CSS Modules**.
+A calculator user interface built with React, featuring dynamic button rendering from arrays and scoped styling with CSS Modules.
 
 ---
 
-## 📖 About
+## Overview
 
-This is the first version of a calculator application that focuses on building the **UI layer** with proper component architecture. Buttons are dynamically rendered from an array using `.map()`, and all styles are scoped using CSS Modules.
-
----
-
-## ✨ Features
-
-- 🔢 Dynamically rendered calculator buttons (0–9, operators, clear, equals)
-- 📟 Clean display input field
-- 🎨 Fully scoped styling with **CSS Modules**
-- 📦 Modular component structure (`Display` + `ButtonsContainer`)
-- ⚡ Vite-powered fast development
+This project implements a calculator UI with two primary components -- a display input field and a container of calculator buttons. All 17 buttons (digits 0-9, operators +, -, *, /, clear, equals, decimal) are rendered dynamically from a single array using `.map()`, eliminating repetitive JSX. The entire application uses CSS Modules for scoped, collision-free styling with a compact 200px-wide layout.
 
 ---
 
-## 🚀 Getting Started
+## Tech Stack
+
+| Technology       | Version  | Purpose                                 |
+|:-----------------|:--------:|:----------------------------------------|
+| React            | 19.2     | Component-based UI library              |
+| React DOM        | 19.2     | DOM rendering for React                 |
+| Vite             | 7.3      | Development server and bundler          |
+| CSS Modules      | --       | Scoped, collision-free component styles |
+| ESLint           | 9.x      | Static code analysis                    |
+
+---
+
+## Project Structure
+
+```
+projects/Calculator-version-one/
+|-- public/
+|   +-- vite.svg
+|-- src/
+|   |-- assets/
+|   |   +-- react.svg
+|   |-- components/
+|   |   |-- ButtonsContainer.jsx
+|   |   |-- ButtonsContainer.module.css
+|   |   |-- Display.jsx
+|   |   +-- Display.module.css
+|   |-- App.jsx
+|   +-- App.module.css
+|-- index.html
+|-- package.json
+|-- vite.config.js
++-- eslint.config.js
+```
+
+---
+
+## Component Architecture
+
+```
+App (calculator wrapper with border)
+|-- Display (text input for showing results)
++-- ButtonsContainer (grid of calculator buttons)
+    +-- button [x17] (dynamically rendered from array)
+```
+
+### App (App.jsx)
+
+The root component that wraps the calculator in a styled container with a solid border and rounded corners. Imports and renders the `Display` and `ButtonsContainer` components.
+
+### Display (Display.jsx)
+
+Renders a single text input element styled with CSS Modules. The input has a width of 170px with 25px font size, providing the calculator's display area where results would be shown.
+
+### ButtonsContainer (ButtonsContainer.jsx)
+
+Contains an array of all 17 button labels and renders them dynamically using `.map()`. The buttons are arranged in a flex-wrap layout with centered alignment. Each button is styled with CSS Modules to have uniform dimensions (45px x 45px) with consistent margin spacing.
+
+**Button Layout:**
+
+| Row | Buttons             |
+|:----|:--------------------|
+| 1   | C, 1, 2, +          |
+| 2   | 3, 4, -, 5          |
+| 3   | 6, *, 7, 8          |
+| 4   | /, =, 9, 0          |
+| 5   | .                   |
+
+---
+
+## Styling Details
+
+All styles are implemented using CSS Modules with three separate module files:
+
+- **App.module.css** -- Calculator container with 3px solid border, 200px width, and rounded corners
+- **ButtonsContainer.module.css** -- Flexbox grid with wrap, centered alignment, and uniform 45px button sizing
+- **Display.module.css** -- Input field with 170px width and large 25px font size
+
+---
+
+## Key Concepts Demonstrated
+
+- **CSS Modules** -- Using `.module.css` files with `styles["class-name"]` syntax for scoped styling
+- **Dynamic Rendering** -- Generating all calculator buttons from a single array using `.map()`
+- **Component Decomposition** -- Separating display and buttons into independent, reusable components
+- **Flexbox Layout** -- Using `display: flex`, `flex-wrap: wrap`, and `justify-content: center` for grid layout
+- **Props Pattern** -- Components accept `props` parameter for future extensibility
+
+---
+
+## Getting Started
 
 ```bash
-# Navigate to project directory
+# Navigate to the project directory
 cd projects/Calculator-version-one
 
 # Install dependencies
 npm install
 
-# Start dev server
+# Start the development server
 npm run dev
 ```
 
----
-
-## 📁 Project Structure
-
-```
-Calculator-version-one/
-├── src/
-│   ├── components/
-│   │   ├── Display.jsx                  # Calculator display
-│   │   ├── Display.module.css           # Display styles
-│   │   ├── ButtonsContainer.jsx         # Button grid component
-│   │   └── ButtonsContainer.module.css  # Button grid styles
-│   ├── App.jsx                          # Root layout
-│   ├── App.module.css                   # App-level styles
-│   ├── assets/
-│   │   └── react.svg
-│   └── main.jsx
-├── public/
-│   └── vite.svg
-├── index.html
-├── package.json
-└── vite.config.js
-```
+The application will be available at `http://localhost:5173` by default.
 
 ---
 
-## 🧠 Concepts Practiced
+## Available Scripts
 
-| Concept | Description |
-|:--------|:------------|
-| **CSS Modules** | Scoped styles per component (`.module.css`) |
-| **Dynamic Rendering** | Rendering buttons from array with `.map()` |
-| **Component Architecture** | Splitting UI into `Display` and `ButtonsContainer` |
-| **Props** | Passing data between components |
-| **Array Methods** | Using `.map()` for dynamic UI generation |
-
----
-
-## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
+| Command           | Description                             |
+|:------------------|:----------------------------------------|
+| `npm run dev`     | Start the Vite development server       |
+| `npm run build`   | Create an optimized production build    |
+| `npm run preview` | Preview the production build locally    |
+| `npm run lint`    | Run ESLint to check for code issues     |
