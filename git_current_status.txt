@@ -1,0 +1,13 @@
+ M BootStrap/prec/README.md
+ M Fragments/learning-fragment/README.md
+ M README.md
+ M projects/Calculator-version-one/README.md
+ M projects/bharat-clock-version-1/README.md
+ M projects/todo-app-version-one/README.md
+ M projects/todo-app-version-two/README.md
+ M react/README.md
+?? check.py
+?? git_all_files.txt
+?? git_current_status.txt
+?? push_changes.ps1
+?? status.txt
