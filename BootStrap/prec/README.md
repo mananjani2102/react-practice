@@ -1,75 +1,101 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-</p>
+# Bootstrap Integration Practice
 
-# 🎨 Bootstrap Practice — Button Variants
-
-> A hands-on React project exploring **Bootstrap 5 integration** with React + Vite, showcasing all Bootstrap button variants.
+A hands-on project demonstrating how to integrate Bootstrap 5 CSS framework into a React application built with Vite.
 
 ---
 
-## 📖 About
+## Overview
 
-This mini-project demonstrates how to integrate and use **Bootstrap 5** inside a React application built with Vite. It renders all standard Bootstrap button variants:
-
-- 🔵 Primary, Secondary, Success
-- 🔴 Danger, Warning, Info
-- ⚪ Light, Dark, Link
+This project showcases the usage of Bootstrap 5 button variants inside a React component. It renders nine different Bootstrap button styles -- Primary, Secondary, Success, Danger, Warning, Info, Light, Dark, and Link -- to demonstrate how pre-built CSS classes from Bootstrap work within the React component model.
 
 ---
 
-## ✨ Features
+## Tech Stack
 
-- 🎨 All 9 Bootstrap button styles rendered in React
-- 📦 Bootstrap imported via npm (not CDN)
-- ⚡ Vite-powered fast development with HMR
-- 🧪 Practice project for CSS framework integration
+| Technology       | Version  | Purpose                          |
+|:-----------------|:--------:|:---------------------------------|
+| React            | 19.2     | Component-based UI library       |
+| React DOM        | 19.2     | DOM rendering for React          |
+| Vite             | 7.2      | Development server and bundler   |
+| Bootstrap        | 5.3      | CSS component framework          |
+| ESLint           | 9.x      | Static code analysis             |
 
 ---
 
-## 🚀 Getting Started
+## Project Structure
+
+```
+BootStrap/prec/
+|-- public/
+|   +-- vite.svg
+|-- src/
+|   |-- assets/
+|   |   +-- react.svg
+|   |-- App.css
+|   |-- App.jsx
+|   |-- index.css
+|   +-- main.jsx
+|-- index.html
+|-- package.json
+|-- vite.config.js
++-- eslint.config.js
+```
+
+---
+
+## Component Architecture
+
+### App (App.jsx)
+
+The main component renders all nine Bootstrap button variants using standard HTML `<button>` elements with Bootstrap CSS classes. The component uses React fragment syntax (`<>...</>`) and demonstrates the `useState` hook import for future interactivity.
+
+**Bootstrap Button Classes Used:**
+
+| Class              | Visual Style            |
+|:-------------------|:------------------------|
+| `btn btn-primary`  | Blue primary button     |
+| `btn btn-secondary`| Grey secondary button   |
+| `btn btn-success`  | Green success button    |
+| `btn btn-danger`   | Red danger button       |
+| `btn btn-warning`  | Yellow warning button   |
+| `btn btn-info`     | Cyan info button        |
+| `btn btn-light`    | Light background button |
+| `btn btn-dark`     | Dark background button  |
+| `btn btn-link`     | Link-styled button      |
+
+---
+
+## Key Concepts Demonstrated
+
+- **Bootstrap in React** -- Importing Bootstrap CSS into a React application
+- **CSS Class Usage** -- Applying Bootstrap utility classes using the `class` attribute
+- **Fragment Syntax** -- Grouping multiple button elements without a wrapper div
+- **Third-Party Libraries** -- Installing and configuring external CSS frameworks with npm
+
+---
+
+## Getting Started
 
 ```bash
-# Navigate to project directory
+# Navigate to the project directory
 cd BootStrap/prec
 
 # Install dependencies
 npm install
 
-# Start dev server
+# Start the development server
 npm run dev
 ```
 
----
-
-## 📁 Project Structure
-
-```
-prec/
-├── src/
-│   ├── assets/
-│   │   └── react.svg
-│   ├── App.css
-│   ├── App.jsx           # Button variants demo
-│   ├── index.css
-│   └── main.jsx
-├── index.html
-├── package.json
-└── vite.config.js
-```
+The application will be available at `http://localhost:5173` by default.
 
 ---
 
-## 🧠 Concepts Practiced
+## Available Scripts
 
-| Concept | Description |
-|:--------|:------------|
-| **Bootstrap in React** | Installing & importing Bootstrap via npm |
-| **CSS Classes in JSX** | Using `className` for Bootstrap classes |
-| **Component Rendering** | Rendering multiple UI elements |
-| **useState Hook** | State management basics |
-
----
-
-## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
+| Command           | Description                             |
+|:------------------|:----------------------------------------|
+| `npm run dev`     | Start the Vite development server       |
+| `npm run build`   | Create an optimized production build    |
+| `npm run preview` | Preview the production build locally    |
+| `npm run lint`    | Run ESLint to check for code issues     |
