@@ -1,79 +1,115 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-  <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-</p>
+# Bharat Clock Version 1
 
-# 🕰️ Bharat Clock — Version 1
-
-> A real-time **digital clock** application built with React and styled with **Bootstrap 5**, demonstrating component composition and clean architecture.
+A real-time clock application that displays the current date and time in India, built with React and styled using Bootstrap 5 typography utilities.
 
 ---
 
-## 📖 About
+## Overview
 
-Bharat Clock is a beautifully designed clock application that displays the current time in real-time. It is composed of three modular React components:
-
-- **ClockHeading** — Displays the application title
-- **ClockSlogan** — Shows a motivational slogan
-- **CurrentTime** — Renders the live, updating current time
+Bharat Clock is a component-based clock application that demonstrates how to break down a UI into small, focused, reusable components. The application displays a bold heading, a descriptive slogan, and the current date and time using JavaScript's built-in `Date` API. All text styling is handled through Bootstrap utility classes such as `fw-bolder` and `lead`.
 
 ---
 
-## ✨ Features
+## Tech Stack
 
-- ⏱️ Real-time clock display that updates every second
-- 🎨 Styled with **Bootstrap 5** for a polished look
-- 📦 Clean component composition pattern
-- 🏗️ Modular architecture with separate heading, slogan, and time components
-- ⚡ Vite-powered blazing-fast development
+| Technology       | Version  | Purpose                                |
+|:-----------------|:--------:|:---------------------------------------|
+| React            | 19.2     | Component-based UI library             |
+| React DOM        | 19.2     | DOM rendering for React                |
+| Vite             | 7.2      | Development server and bundler         |
+| Bootstrap        | 5.x      | Typography and utility styling classes |
+| ESLint           | 9.x      | Static code analysis                   |
 
 ---
 
-## 🚀 Getting Started
+## Project Structure
+
+```
+projects/bharat-clock-version-1/
+|-- public/
+|   +-- vite.svg
+|-- src/
+|   |-- assets/
+|   |   +-- react.svg
+|   |-- Components/
+|   |   |-- ClockHeading.jsx
+|   |   |-- ClockSlogan.jsx
+|   |   +-- CurrentTime.jsx
+|   |-- App.css
+|   |-- App.jsx
+|   +-- main.jsx
+|-- index.html
+|-- package.json
+|-- vite.config.js
++-- eslint.config.js
+```
+
+---
+
+## Component Architecture
+
+```
+App
+|-- ClockHeading  (bold title text)
+|-- ClockSlogan   (descriptive subtitle)
++-- CurrentTime   (live date and time display)
+```
+
+### App (App.jsx)
+
+The root component that composes three child components inside a `<center>` element. Imports Bootstrap CSS globally for typography utilities.
+
+### ClockHeading (ClockHeading.jsx)
+
+Renders the application title "Bharat Clock" as an `<h1>` element. Uses Bootstrap's `fw-bolder` class for extra bold font weight.
+
+### ClockSlogan (ClockSlogan.jsx)
+
+Displays a descriptive message: "This is the clock that shows the time in Bharat at all times." Uses Bootstrap's `lead` class for slightly larger, lighter paragraph styling.
+
+### CurrentTime (CurrentTime.jsx)
+
+Creates a new `Date` object on every render and displays both the locale-formatted date (`toLocaleDateString()`) and time (`toLocaleTimeString()`). Styled with Bootstrap's `lead` class for consistent typography.
+
+**Output Format:**
+```
+This is the current time: 6/3/2026 - 10:30:45 AM
+```
+
+---
+
+## Key Concepts Demonstrated
+
+- **Component Composition** -- Breaking UI into small, single-responsibility components
+- **JavaScript Date API** -- Using `new Date()`, `toLocaleDateString()`, and `toLocaleTimeString()`
+- **Bootstrap Typography** -- Applying `fw-bolder` and `lead` utility classes for text styling
+- **CSS Framework Import** -- Importing `bootstrap/dist/css/bootstrap.min.css` in a React project
+- **Functional Components** -- Each component is a simple function that returns JSX
+
+---
+
+## Getting Started
 
 ```bash
-# Navigate to project directory
+# Navigate to the project directory
 cd projects/bharat-clock-version-1
 
 # Install dependencies
 npm install
 
-# Start dev server
+# Start the development server
 npm run dev
 ```
 
----
-
-## 📁 Project Structure
-
-```
-bharat-clock-version-1/
-├── src/
-│   ├── Components/
-│   │   ├── ClockHeading.jsx    # Clock title component
-│   │   ├── ClockSlogan.jsx     # Slogan display component
-│   │   └── CurrentTime.jsx     # Live time component
-│   ├── App.css
-│   ├── App.jsx                 # Root layout composing all components
-│   └── main.jsx
-├── index.html
-├── package.json
-└── vite.config.js
-```
+The application will be available at `http://localhost:5173` by default.
 
 ---
 
-## 🧠 Concepts Practiced
+## Available Scripts
 
-| Concept | Description |
-|:--------|:------------|
-| **Component Composition** | Combining `ClockHeading`, `ClockSlogan`, `CurrentTime` |
-| **Bootstrap Integration** | Using Bootstrap CSS via npm in React |
-| **Real-time Updates** | Live clock using JavaScript Date API |
-| **Functional Components** | Simple, focused components |
-| **Clean Architecture** | Separation of concerns in component design |
-
----
-
-## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
+| Command           | Description                             |
+|:------------------|:----------------------------------------|
+| `npm run dev`     | Start the Vite development server       |
+| `npm run build`   | Create an optimized production build    |
+| `npm run preview` | Preview the production build locally    |
+| `npm run lint`    | Run ESLint to check for code issues     |
