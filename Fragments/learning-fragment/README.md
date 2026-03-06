@@ -1,81 +1,126 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-</p>
+# Food Items -- Fragments, Props, and Lists
 
-# 🍎 Learning Fragments — Food Items List
-
-> A React practice project focused on **Fragments**, **Props**, **List Rendering**, and **Conditional Rendering** using a healthy food items list.
+A React application that renders a list of healthy food items, demonstrating core React patterns including props, list rendering, conditional rendering, CSS Modules, and the Container component pattern with `props.children`.
 
 ---
 
-## 📖 About
+## Overview
 
-This project renders a list of healthy food items using core React patterns. It demonstrates how to:
-
-- Pass data through **props** from parent to child components
-- Render dynamic lists using **`.map()`** with proper **keys**
-- Show conditional **error/empty messages** based on data
-- Use **Bootstrap's list-group** for clean UI styling
-- Apply **CSS Modules** for scoped component styles
+This project builds a "Healthy Food" display interface where food items are rendered dynamically from an array using `.map()`. Each item includes a styled label and a "Buy" button with a click event handler. The application also demonstrates conditional rendering for empty-state messages and uses a reusable `Container` component that wraps its children with consistent border and spacing styles.
 
 ---
 
-## ✨ Features
+## Tech Stack
 
-- 🥗 Dynamic food items list rendered from an array
-- 📦 Reusable `FoodItems`, `Item`, and `ErrorMessage` components
-- 🎨 Styled with Bootstrap list-group classes
-- ⚡ Conditional rendering for empty states
+| Technology       | Version  | Purpose                                 |
+|:-----------------|:--------:|:----------------------------------------|
+| React            | 19.2     | Component-based UI library              |
+| React DOM        | 19.2     | DOM rendering for React                 |
+| Vite             | 7.2      | Development server and bundler          |
+| Bootstrap        | 5.3      | List group styling and button classes   |
+| CSS Modules      | --       | Scoped, collision-free component styles |
+| ESLint           | 9.x      | Static code analysis                    |
 
 ---
 
-## 🚀 Getting Started
+## Project Structure
+
+```
+Fragments/learning-fragment/
+|-- public/
+|   +-- vite.svg
+|-- src/
+|   |-- assets/
+|   |   +-- react.svg
+|   |-- components/
+|   |   |-- Container.jsx
+|   |   |-- Container.module.css
+|   |   |-- ErrorMessage.jsx
+|   |   |-- FoodItems.jsx
+|   |   |-- item.jsx
+|   |   +-- item.module.css
+|   |-- App.css
+|   |-- App.jsx
+|   +-- main.jsx
+|-- index.html
+|-- package.json
+|-- vite.config.js
++-- eslint.config.js
+```
+
+---
+
+## Component Architecture
+
+```
+App
+|-- Container (wraps content with border and padding)
+|   |-- ErrorMessage (conditional empty-state message)
+|   +-- FoodItems (list container)
+|       +-- item (individual food item with Buy button) [x5]
+```
+
+### App (App.jsx)
+
+The root component that defines the food items array (`["Sabzi", "Green Vegetable", "Roti", "Salad", "Milk"]`) and passes it as props to child components. Uses React fragment syntax (`<>...</>`) and wraps content inside the `Container` component. Imports Bootstrap CSS globally.
+
+### Container (Container.jsx)
+
+A reusable wrapper component that accepts `props.children` and renders them inside a styled `<div>`. Styled using CSS Modules with a border, rounded corners, responsive width (`min-width: 300px`, `width: 50%`), and consistent padding.
+
+### ErrorMessage (ErrorMessage.jsx)
+
+A conditional rendering component that displays "I am still hungry." when the `items` array is empty. Uses the `&&` short-circuit evaluation pattern for conditional rendering.
+
+### FoodItems (FoodItems.jsx)
+
+Receives the `items` array via props and renders each item inside a Bootstrap `list-group` using `.map()`. Each item receives a unique `key` prop (the item string itself) and the food item name is passed as the `foodItem` prop to the `item` component.
+
+### item (item.jsx)
+
+Renders an individual food item as a list element (`<li>`) styled with both CSS Modules and Bootstrap classes. Includes:
+
+- A `<span>` displaying the food name with custom font weight and color
+- A "Buy" `<button>` with a click handler that logs the purchase action to the console
+- CSS Module classes for the item background, span styling, and button float positioning
+
+---
+
+## Key Concepts Demonstrated
+
+- **Props** -- Passing data from parent to child components via attributes
+- **List Rendering** -- Using `.map()` to dynamically generate UI from arrays
+- **Conditional Rendering** -- Using `&&` short-circuit to show or hide elements
+- **CSS Modules** -- Importing `.module.css` files for scoped, collision-free styling
+- **props.children** -- Building reusable container components that wrap arbitrary content
+- **Event Handling** -- Attaching `onClick` handlers to buttons with arrow functions
+- **Fragment Syntax** -- Using `<>...</>` to avoid unnecessary wrapper elements
+- **Bootstrap Integration** -- Combining Bootstrap utility classes with custom CSS Modules
+
+---
+
+## Getting Started
 
 ```bash
-# Navigate to project directory
+# Navigate to the project directory
 cd Fragments/learning-fragment
 
 # Install dependencies
 npm install
 
-# Start dev server
+# Start the development server
 npm run dev
 ```
 
----
-
-## 📁 Project Structure
-
-```
-learning-fragment/
-├── src/
-│   ├── components/
-│   │   ├── FoodItems.jsx         # List container component
-│   │   ├── item.jsx              # Individual item component
-│   │   ├── item.module.css       # Scoped styles for item
-│   │   └── ErrorMessage.jsx      # Conditional error display
-│   ├── App.css
-│   ├── App.jsx                   # Root component with data
-│   └── main.jsx
-├── index.html
-├── package.json
-└── vite.config.js
-```
+The application will be available at `http://localhost:5173` by default.
 
 ---
 
-## 🧠 Concepts Practiced
+## Available Scripts
 
-| Concept | Description |
-|:--------|:------------|
-| **Props** | Passing `items` array from `App` → `FoodItems` → `Item` |
-| **List Rendering** | Using `.map()` to dynamically render list items |
-| **Keys** | Assigning unique keys for list performance |
-| **Conditional Rendering** | Showing error message when list is empty |
-| **CSS Modules** | Scoped styling with `item.module.css` |
-| **Fragments** | Understanding React Fragment usage |
-
----
-
-## 🔗 Part of [React Practice Repository](https://github.com/mananjani2102/react-practice)
+| Command           | Description                             |
+|:------------------|:----------------------------------------|
+| `npm run dev`     | Start the Vite development server       |
+| `npm run build`   | Create an optimized production build    |
+| `npm run preview` | Preview the production build locally    |
+| `npm run lint`    | Run ESLint to check for code issues     |
